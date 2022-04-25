@@ -1,0 +1,13 @@
+var locate_data = $.ajax({
+  url: 'http://admin:mypassword@localhost:5984/database_name',
+  type:'GET',
+  dataType: "json",
+  success: function(data){
+    console.log("successfully loaded."), 
+    alert(data);
+  },
+  error: function(xhr) {
+       console.log("error"), 
+       alert(xhr.statusText)
+   }
+})
